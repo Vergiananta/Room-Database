@@ -22,7 +22,7 @@ class ListAdapter : RecyclerView.Adapter<ListHolder>() {
         holder.itemView.lastname.text = currentItem.lastName.toString()
         holder.itemView.age.text = currentItem.age.toString()
 
-        holder.itemView.
+
     }
 
     override fun getItemCount() = userList.size
