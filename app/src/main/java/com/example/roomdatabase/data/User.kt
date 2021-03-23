@@ -1,5 +1,6 @@
 package com.example.roomdatabase.data
 
+import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -9,5 +10,12 @@ data class User(
     val id : Int,
     val firstName: String,
     val lastName: String,
-    val age: Int
+    val age: Int,
+    @Embedded
+    val address: Address
+)
+
+data class Address(
+    val address : String,
+    val HomeNumber : Int
 )

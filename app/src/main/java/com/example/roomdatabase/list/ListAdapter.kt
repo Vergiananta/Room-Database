@@ -1,4 +1,4 @@
-package com.example.roomdatabase.views
+package com.example.roomdatabase.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -21,6 +21,8 @@ class ListAdapter : RecyclerView.Adapter<ListHolder>() {
         holder.itemView.firstname.text = currentItem.firstName.toString()
         holder.itemView.lastname.text = currentItem.lastName.toString()
         holder.itemView.age.text = currentItem.age.toString()
+
+        holder.itemView.
     }
 
     override fun getItemCount() = userList.size

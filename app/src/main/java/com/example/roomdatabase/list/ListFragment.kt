@@ -1,4 +1,4 @@
-package com.example.roomdatabase.views
+package com.example.roomdatabase.list
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,10 +9,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.roomdatabase.R
-import com.example.roomdatabase.data.User
 import com.example.roomdatabase.data.UserViewModel
 import kotlinx.android.synthetic.main.fragment_list.*
 import kotlinx.android.synthetic.main.fragment_list.view.*
@@ -48,7 +46,7 @@ class ListFragment : Fragment() {
 
         //user view model
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-        userViewModel.readAllData.observe(viewLifecycleOwner, Observer { user ->
+        userViewModel.readAllData().observe(viewLifecycleOwner, Observer { user ->
             adapter.setData(user)
         })
     }

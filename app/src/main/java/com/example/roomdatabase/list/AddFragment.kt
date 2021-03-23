@@ -1,4 +1,4 @@
-package com.example.roomdatabase.views
+package com.example.roomdatabase.list
 
 import android.os.Bundle
 import android.text.Editable
